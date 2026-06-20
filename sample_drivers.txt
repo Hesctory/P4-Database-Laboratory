@@ -1,0 +1,4 @@
+# Arquivo de exemplo para "Inserir pilotos por arquivo" (usuário de equipe)
+# Formato: driver_ref,nome,sobrenome,data_nascimento,id_pais
+joao_silva,João,Silva,2001-03-15,30
+lewis_clone,Lewis,Hamilton,1990-01-01,77

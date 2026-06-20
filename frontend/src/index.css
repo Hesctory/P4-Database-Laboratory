@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Design tokens (shadcn/ui convention adapted to Tailwind v4 @theme). */
+@theme {
+  --color-background: oklch(0.985 0.002 247);
+  --color-foreground: oklch(0.21 0.03 262);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.21 0.03 262);
+  --color-primary: oklch(0.55 0.22 25);          /* F1 red */
+  --color-primary-foreground: oklch(0.99 0 0);
+  --color-secondary: oklch(0.95 0.01 247);
+  --color-secondary-foreground: oklch(0.3 0.03 262);
+  --color-muted: oklch(0.96 0.005 247);
+  --color-muted-foreground: oklch(0.55 0.02 262);
+  --color-destructive: oklch(0.58 0.22 27);
+  --color-destructive-foreground: oklch(0.99 0 0);
+  --color-border: oklch(0.91 0.01 247);
+  --color-input: oklch(0.91 0.01 247);
+  --color-ring: oklch(0.55 0.22 25);
+  --radius: 0.5rem;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}

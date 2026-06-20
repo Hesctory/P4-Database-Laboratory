@@ -1,0 +1,13 @@
+# Segredos / credenciais
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# Editores
+.vscode/
+.idea/
