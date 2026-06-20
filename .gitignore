@@ -11,3 +11,10 @@ node_modules/
 # Editores
 .vscode/
 .idea/
+
+# Documentos / arquivos internos (não versionar)
+DECISIONS.md
+QUERY_REPORT.md
+DB_backup.sql
+BasicConector.py
+FinalProjectStatement.md
