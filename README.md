@@ -8,14 +8,13 @@ relatórios e controle de acesso.
 - **Frontend:** TypeScript + React + Tailwind CSS + componentes estilo shadcn/ui — pasta `frontend/`
 - **Banco:** PostgreSQL (base `T1 work` restaurada a partir de `full_db.sql`)
 
-As decisões de arquitetura estão detalhadas em `DECISIONS.md`.
-
 ---
 
 ## 1. Pré-requisitos
 
 - **PostgreSQL** instalado e rodando em `localhost:5432`, com o papel (role) `postgres` disponível
   - As extensões `cube`, `earthdistance` e `pgcrypto` (pacote **contrib**) precisam estar disponíveis. Já vêm nos instaladores de Windows (EDB) e macOS (Postgres.app); no Ubuntu/Debian instale com `sudo apt install postgresql-contrib`. Sem elas a restauração de `full_db.sql` falha.
+  - O dump cria a base com o locale `en_US.UTF-8`. Se o seu PostgreSQL não tiver esse locale (verifique com `locale -a`), edite a primeira linha de `full_db.sql` e troque `LOCALE = 'en_US.UTF-8'` por um locale UTF-8 disponível na máquina (ex.: `pt_BR.UTF-8` ou `C.UTF-8`). **Não** altere `ENCODING = 'UTF8'` — os dados estão gravados em UTF-8 e mudar a codificação corromperia os caracteres acentuados. Trocar apenas o locale afeta no máximo a ordem alfabética dos relatórios, não os dados.
 - **Python 3.10+**
 - **Node.js 18+**
 
