@@ -18,8 +18,10 @@ CREATE INDEX IF NOT EXISTS idx_results_constructor
 CREATE INDEX IF NOT EXISTS idx_results_driver
     ON results (driver_id);
 
--- RESULTS.status_id: acelera o JOIN results → status e o GROUP BY por
--- status dos Relatórios 1, 5 e 7.
+-- RESULTS.status_id: índice de COBERTURA para o Relatório 1
+-- (vw_results_by_status), que agrupa TODOS os results por status. Contendo
+-- apenas status_id, permite um Index-Only Scan que evita varrer a tabela
+-- inteira (ganho que cresce com o tamanho de RESULTS).
 CREATE INDEX IF NOT EXISTS idx_results_status
     ON results (status_id);
 
